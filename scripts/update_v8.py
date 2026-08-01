@@ -10,19 +10,23 @@ import api_client as A
 TARGETS = ("player_assist_light_idea", "player_assist_medium_idea", "player_assist_heavy_idea")
 
 
+PCT_FLOOR = -1.0  # 负向百分比修正下限：低于 -100% 后效果被游戏钳制为 0，缩放超出即浪费
+CAPS = {"army_leader_start_level": 5}  # 游戏将领等级上限（MAX_LEADER_LEVEL）
+
+
 def scale(val, mult, is_flat):
-    """按类型缩放：flat 整数用较小倍率，百分比用大倍率"""
+    """按类型缩放：flat 整数用较小倍率，百分比用大倍率（百分比钳制到 PCT_FLOOR）"""
     if is_flat:
         nv = val * mult
         return int(round(nv))
-    nv = val * mult
-    return round(nv, 2)
+    nv = round(val * mult, 2)
+    return max(nv, PCT_FLOOR)
 
 
 # 中档 ×1.5、重档 ×3（百分比）；flat 整数 中×1.5 重×2
 TIER = {"player_assist_light_idea": (1.0, 1.0), "player_assist_medium_idea": (1.5, 1.5), "player_assist_heavy_idea": (3.0, 2.0)}
 FLAT_KEYS = {"industrial_capacity_factory", "political_power_gain", "weekly_manpower",
-             "special_forces_cap_flat", "army_leader_start_level", "naval_invasion_capacity"}
+             "special_forces_cap_flat", "army_leader_start_level"}
 
 IDEA_IDS = A.get_ids("ideas", "idea_id")
 
@@ -49,9 +53,13 @@ for iid, iint in IDEA_IDS.items():
     new = {}
     for k, v in cur.items():
         if k in FLAT_KEYS:
-            new[k] = scale(v, flat_mult, True)
+            nv = scale(v, flat_mult, True)
         else:
-            new[k] = scale(v, pct_mult, False)
+            nv = scale(v, pct_mult, False)
+        cap = CAPS.get(k)
+        if cap is not None:
+            nv = min(nv, cap)
+        new[k] = nv
     s, b2 = A.call("PUT", f"/api/projects/{A.PID}/ideas/{iint}", {"modifier": new})
     A.ensure_ok(s, b2, f"PUT {iid}")
     summary[iid] = new
