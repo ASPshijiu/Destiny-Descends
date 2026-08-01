@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_idea_UNK_player_assist_heavy_idea
+		texturefile = "gfx/interface/ideas/idea_UNK_player_assist_heavy_idea.dds"
+	}
+	spriteType = {
+		name = GFX_idea_UNK_player_assist_light_idea
+		texturefile = "gfx/interface/ideas/idea_UNK_player_assist_light_idea.dds"
+	}
+	spriteType = {
+		name = GFX_idea_UNK_player_assist_medium_idea
+		texturefile = "gfx/interface/ideas/idea_UNK_player_assist_medium_idea.dds"
+	}
+}

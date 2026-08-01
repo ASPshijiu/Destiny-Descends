@@ -2,7 +2,7 @@ ideas = {
 
 	country = {
 		player_assist_heavy_idea = {
-			picture = generic_build_infrastructure
+			picture = UNK_player_assist_heavy_idea
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 1
@@ -50,11 +50,19 @@ ideas = {
 				land_reinforce_rate = 0.2
 				infantry_attack_factor = 0.15
 				conscription = 0.05
+				intel_network_speed = 0.5
+				opinion_gain_mult = 0.5
+				advisor_cost_factor = -0.4
+				army_core_attack_factor = 0.2
+				army_non_core_attack_factor = 0.2
+				equipment_consumption_factor = -0.2
+				conversion_speed = 0.2
+				air_accident_chance_factor = -0.4
 			}
 		}
 
 		player_assist_light_idea = {
-			picture = generic_build_infrastructure
+			picture = UNK_player_assist_light_idea
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.15
@@ -98,11 +106,19 @@ ideas = {
 				equipment_capture_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				artillery_attack_factor = 0.05
+				intel_network_speed = 0.1
+				opinion_gain_mult = 0.1
+				advisor_cost_factor = -0.1
+				army_core_attack_factor = 0.05
+				army_non_core_attack_factor = 0.05
+				equipment_consumption_factor = -0.05
+				conversion_speed = 0.05
+				air_accident_chance_factor = -0.1
 			}
 		}
 
 		player_assist_medium_idea = {
-			picture = generic_build_infrastructure
+			picture = UNK_player_assist_medium_idea
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.3
@@ -148,6 +164,14 @@ ideas = {
 				artillery_attack_factor = 0.1
 				tank_attack_factor = 0.1
 				land_reinforce_rate = 0.1
+				intel_network_speed = 0.2
+				opinion_gain_mult = 0.2
+				advisor_cost_factor = -0.2
+				army_core_attack_factor = 0.1
+				army_non_core_attack_factor = 0.1
+				equipment_consumption_factor = -0.1
+				conversion_speed = 0.1
+				air_accident_chance_factor = -0.2
 			}
 		}
 
