@@ -1,28 +1,6 @@
 # -*- coding: utf-8 -*-
 """天命降临 v6：扩展 8 个 buff 维度 + 校验导出安装"""
-import json, os, sys, urllib.request, urllib.error, zipfile, shutil, io
-try:
-    sys.stdout.reconfigure(encoding="utf-8")
-except Exception:
-    pass
-
-BASE = os.environ["HOI4_PLATFORM_URL"].rstrip("/")
-TOKEN = os.environ["HOI4_PLATFORM_TOKEN"]
-PID = 2008
-MODDIR = r"C:\Users\xw130\Documents\Paradox Interactive\Hearts of Iron IV\mod"
-
-def call(m, p, body=None):
-    d = json.dumps(body, ensure_ascii=False).encode("utf-8") if body is not None else None
-    r = urllib.request.Request(BASE + p, data=d, method=m)
-    r.add_header("Content-Type", "application/json; charset=utf-8")
-    r.add_header("Authorization", "Bearer " + TOKEN)
-    r.add_header("User-Agent", "hoi4-modmaking-skills/1.x")
-    try:
-        x = urllib.request.urlopen(r, timeout=60)
-        s = x.read().decode("utf-8", "replace")
-        return x.status, (json.loads(s) if s else None)
-    except urllib.error.HTTPError as e:
-        return e.code, e.read().decode("utf-8", "replace")
+import api_client as A
 
 # 8 个新维度（轻/中/重渐进）
 NEW = {
@@ -43,50 +21,21 @@ IDEA_IDS = {"player_assist_light_idea": 369870, "player_assist_medium_idea": 369
 
 # 获取当前 modifier 并追加
 for iid, iint in IDEA_IDS.items():
-    _, b = call("GET", f"/api/projects/{PID}/ideas/{iint}")
+    _, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
     cur = (b or {}).get("modifier") or {}
     tier = "light" if "light" in iid else ("medium" if "medium" in iid else "heavy")
     merged = dict(cur)
     merged.update(NEW[tier])
-    s, b2 = call("PUT", f"/api/projects/{PID}/ideas/{iint}", {"modifier": merged})
+    s, b2 = A.call("PUT", f"/api/projects/{A.PID}/ideas/{iint}", {"modifier": merged})
     print(f"PUT {iid} ({len(merged)} modifiers) ->", s, (str(b2)[:150] if s >= 300 else ""))
 
 # 校验
-s, b = call("POST", f"/api/projects/{PID}/export/validate", {})
-print("\nexport/validate ->", s)
-if isinstance(b, dict):
-    for it in b.get("issues", []):
-        print("  issue:", it.get("severity"), it.get("code"), str(it.get("message"))[:140])
-s, b = call("GET", f"/api/lint/tree-validation/{PID}")
-print("lint ->", s)
-if isinstance(b, dict):
-    n = sum(len(b.get(k, [])) for k in ("focus", "event", "idea", "decision", "character"))
-    print("lint issues:", n)
-    for k in ("idea", "focus"):
-        for it in b.get(k, []):
-            print(f"  [{k}] {it.get('level')}: {str(it.get('msg'))[:120]}")
+A.report_validation()
 
 # 导出 + 安装
-r = urllib.request.Request(BASE + f"/api/projects/{PID}/export/download")
-r.add_header("Authorization", "Bearer " + TOKEN)
-r.add_header("User-Agent", "hoi4-modmaking-skills/1.x")
-data = urllib.request.urlopen(r, timeout=120).read()
-print("\nexport bytes:", len(data))
-with open(r"C:\Users\xw130\Desktop\hoi4\天命降临_v6.zip", "wb") as f:
-    f.write(data)
-z = zipfile.ZipFile(io.BytesIO(data))
-names = z.namelist()
-mod_folder = [n.split("/")[0] for n in names if "/" in n][0]
-mod_file = [n for n in names if n.endswith(".mod")][0]
-tmp = r"C:\Users\xw130\Desktop\hoi4\_tm_install"
-z.extractall(tmp)
-shutil.copy(os.path.join(tmp, mod_file), MODDIR)
-dst = os.path.join(MODDIR, mod_folder)
-if os.path.isdir(dst):
-    shutil.rmtree(dst)
-shutil.copytree(os.path.join(tmp, mod_folder), dst)
-shutil.rmtree(tmp)
-print("installed", mod_folder)
+names, mod_folder = A.export_and_install(
+    r"C:\Users\xw130\Desktop\hoi4\天命降临_v6.zip",
+    tmpdir=r"C:\Users\xw130\Desktop\hoi4\_tm_install")
 # 图标验证
 for n in sorted(names):
     if "idea" in n and ("png" in n or "dds" in n):

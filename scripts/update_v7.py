@@ -1,28 +1,8 @@
 # -*- coding: utf-8 -*-
 """天命降临 v7：追加 30 项缺失高价值增益维度"""
-import json, os, sys, urllib.request, urllib.error
-try:
-    sys.stdout.reconfigure(encoding="utf-8")
-except Exception:
-    pass
+import api_client as A
 
-BASE = os.environ["HOI4_PLATFORM_URL"].rstrip("/")
-TOKEN = os.environ["HOI4_PLATFORM_TOKEN"]
-PID = 2008
 IDEA_IDS = {"player_assist_light_idea": 369870, "player_assist_medium_idea": 369871, "player_assist_heavy_idea": 369872}
-
-def call(m, p, body=None):
-    d = json.dumps(body, ensure_ascii=False).encode("utf-8") if body is not None else None
-    r = urllib.request.Request(BASE + p, data=d, method=m)
-    r.add_header("Content-Type", "application/json; charset=utf-8")
-    r.add_header("Authorization", "Bearer " + TOKEN)
-    r.add_header("User-Agent", "hoi4-modmaking-skills/1.x")
-    try:
-        x = urllib.request.urlopen(r, timeout=60)
-        s = x.read().decode("utf-8", "replace")
-        return x.status, (json.loads(s) if s else None)
-    except urllib.error.HTTPError as e:
-        return e.code, e.read().decode("utf-8", "replace")
 
 # 30 项新维度（轻/中/重渐进）
 NEW = {
@@ -70,24 +50,13 @@ NEW = {
 
 TIER = {"player_assist_light_idea": 0, "player_assist_medium_idea": 1, "player_assist_heavy_idea": 2}
 for iid, iint in IDEA_IDS.items():
-    _, b = call("GET", f"/api/projects/{PID}/ideas/{iint}")
+    _, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
     cur = (b or {}).get("modifier") or {}
     t = TIER[iid]
     for k, v in NEW.items():
         cur[k] = v[t]
-    s, b2 = call("PUT", f"/api/projects/{PID}/ideas/{iint}", {"modifier": cur})
+    s, b2 = A.call("PUT", f"/api/projects/{A.PID}/ideas/{iint}", {"modifier": cur})
     print(f"PUT {iid} ({len(cur)} modifiers) ->", s, (str(b2)[:150] if s >= 300 else ""))
 
 # 校验
-s, b = call("POST", f"/api/projects/{PID}/export/validate", {})
-print("\nexport/validate ->", s)
-if isinstance(b, dict):
-    for it in b.get("issues", []):
-        print("  issue:", it.get("severity"), it.get("code"), str(it.get("message"))[:150])
-s, b = call("GET", f"/api/lint/tree-validation/{PID}")
-print("lint ->", s)
-if isinstance(b, dict):
-    issues = [(k, it.get("level"), it.get("msg")) for k in ("idea", "focus", "event", "decision") for it in b.get(k, [])]
-    print("lint issues:", len(issues))
-    for k, lv, msg in issues[:30]:
-        print(f"  [{k}] {lv}: {str(msg)[:140]}")
+A.report_validation()
