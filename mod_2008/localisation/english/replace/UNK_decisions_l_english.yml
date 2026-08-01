@@ -7,5 +7,5 @@
  player_assist_light_desc: "Grant a light set of national bonuses to the player."
  player_assist_medium: "Enable Assistance · Medium"
  player_assist_medium_desc: "Grant a medium set of national bonuses to the player."
- player_assist_reset: "Reconfigure Assistance Level"
- player_assist_reset_desc: "Clear the current assistance level so a different tier can be chosen."
+ player_assist_reset: "Close Assistance System"
+ player_assist_reset_desc: "Remove the current assistance level and return to normal."

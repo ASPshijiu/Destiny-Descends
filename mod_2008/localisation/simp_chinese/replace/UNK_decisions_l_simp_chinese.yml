@@ -7,5 +7,5 @@
  player_assist_light_desc: "为玩家提供一组轻度的国家增益。"
  player_assist_medium: "启用辅助系统·中度"
  player_assist_medium_desc: "为玩家提供一组中度的国家增益。"
- player_assist_reset: "重新调整辅助等级"
- player_assist_reset_desc: "清除当前辅助档位，以便重新选择其他等级。"
+ player_assist_reset: "关闭辅助系统"
+ player_assist_reset_desc: "移除当前辅助档位，恢复正常状态。"
