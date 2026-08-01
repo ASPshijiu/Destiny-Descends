@@ -2,7 +2,7 @@
 """天命降临 v8：拉大三档梯度（轻1:中1.5:重3），重档全面爆炸增强"""
 import api_client as A
 
-IDEA_IDS = {"player_assist_light_idea": 369870, "player_assist_medium_idea": 369871, "player_assist_heavy_idea": 369872}
+TARGETS = ("player_assist_light_idea", "player_assist_medium_idea", "player_assist_heavy_idea")
 
 
 def scale(val, mult, is_flat):
@@ -20,8 +20,12 @@ FLAT_KEYS = {"industrial_capacity_factory", "political_power_gain", "weekly_manp
              "special_forces_cap_flat", "army_leader_start_level", "naval_invasion_capacity"}
 
 summary = {}
+IDEA_IDS = A.get_ids("ideas", "idea_id")
 for iid, iint in IDEA_IDS.items():
-    _, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
+    if iid not in TARGETS:
+        continue
+    s0, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
+    A.ensure_ok(s0, b, f"GET {iid}")
     cur = (b or {}).get("modifier") or {}
     pct_mult, flat_mult = TIER[iid]
     new = {}
@@ -31,8 +35,9 @@ for iid, iint in IDEA_IDS.items():
         else:
             new[k] = scale(v, pct_mult, False)
     s, b2 = A.call("PUT", f"/api/projects/{A.PID}/ideas/{iint}", {"modifier": new})
+    A.ensure_ok(s, b2, f"PUT {iid}")
     summary[iid] = new
-    print(f"PUT {iid} ->", s, (str(b2)[:150] if s >= 300 else ""))
+    print(f"PUT {iid} ->", s)
 
 # 打印重档关键数值（对比恐怖程度）
 h = summary["player_assist_heavy_idea"]

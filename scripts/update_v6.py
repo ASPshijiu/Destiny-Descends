@@ -17,17 +17,22 @@ NEW = {
               "army_non_core_attack_factor": 0.20, "equipment_consumption_factor": -0.20,
               "conversion_speed": 0.20, "air_accident_chance_factor": -0.40},
 }
-IDEA_IDS = {"player_assist_light_idea": 369870, "player_assist_medium_idea": 369871, "player_assist_heavy_idea": 369872}
+TARGETS = ("player_assist_light_idea", "player_assist_medium_idea", "player_assist_heavy_idea")
 
-# 获取当前 modifier 并追加
+# 获取当前 modifier 并追加（ID 动态解析，项目重建后仍可用）
+IDEA_IDS = A.get_ids("ideas", "idea_id")
 for iid, iint in IDEA_IDS.items():
-    _, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
+    if iid not in TARGETS:
+        continue
+    s0, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
+    A.ensure_ok(s0, b, f"GET {iid}")
     cur = (b or {}).get("modifier") or {}
     tier = "light" if "light" in iid else ("medium" if "medium" in iid else "heavy")
     merged = dict(cur)
     merged.update(NEW[tier])
     s, b2 = A.call("PUT", f"/api/projects/{A.PID}/ideas/{iint}", {"modifier": merged})
-    print(f"PUT {iid} ({len(merged)} modifiers) ->", s, (str(b2)[:150] if s >= 300 else ""))
+    A.ensure_ok(s, b2, f"PUT {iid}")
+    print(f"PUT {iid} ({len(merged)} modifiers) ->", s)
 
 # 校验
 A.report_validation()

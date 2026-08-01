@@ -2,7 +2,7 @@
 """天命降临 v7：追加 30 项缺失高价值增益维度"""
 import api_client as A
 
-IDEA_IDS = {"player_assist_light_idea": 369870, "player_assist_medium_idea": 369871, "player_assist_heavy_idea": 369872}
+TARGETS = ("player_assist_light_idea", "player_assist_medium_idea", "player_assist_heavy_idea")
 
 # 30 项新维度（轻/中/重渐进）
 NEW = {
@@ -49,14 +49,19 @@ NEW = {
 }
 
 TIER = {"player_assist_light_idea": 0, "player_assist_medium_idea": 1, "player_assist_heavy_idea": 2}
+IDEA_IDS = A.get_ids("ideas", "idea_id")
 for iid, iint in IDEA_IDS.items():
-    _, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
+    if iid not in TARGETS:
+        continue
+    s0, b = A.call("GET", f"/api/projects/{A.PID}/ideas/{iint}")
+    A.ensure_ok(s0, b, f"GET {iid}")
     cur = (b or {}).get("modifier") or {}
     t = TIER[iid]
     for k, v in NEW.items():
         cur[k] = v[t]
     s, b2 = A.call("PUT", f"/api/projects/{A.PID}/ideas/{iint}", {"modifier": cur})
-    print(f"PUT {iid} ({len(cur)} modifiers) ->", s, (str(b2)[:150] if s >= 300 else ""))
+    A.ensure_ok(s, b2, f"PUT {iid}")
+    print(f"PUT {iid} ({len(cur)} modifiers) ->", s)
 
 # 校验
 A.report_validation()
