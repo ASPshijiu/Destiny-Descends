@@ -2,5 +2,5 @@ version="1.0"
 tags={
 	"Gameplay"
 }
-name="游戏体验增强"
+name="天命降临"
 supported_version="1.19.*"

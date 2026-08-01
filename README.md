@@ -1,16 +1,16 @@
-# 游戏体验增强（Player Assistance）
+# 天命降临（Destiny Descends）
 
-钢铁雄心 4（HOI4）玩家辅助系统 mod —— 通过**决议**为玩家提供**分档、可随时切换、全方位**的国家增益。
+钢铁雄心 4（HOI4）天命主题 mod —— 通过**决议**为玩家提供**分档、可随时切换、全方位**的天命祝福。
 
-> HOI4 Player Assistance mod: player-only decisions that grant switchable, all-around national buffs. AI can never use them.
+> HOI4 Destiny Descends mod: player-only decisions that grant switchable, all-around national blessings. AI can never use them.
 
 ## ✨ 特性
 
 - 🎮 **仅玩家可用**：所有决议 `allowed = { is_ai = no }`，AI 永远无法使用
-- 🎚️ **三档可随时切换**：轻度 / 中度 / 全面，档位决议常驻显示，点哪个直接切换（自动移除旧档位，**绝不叠加**）
-- 🚫 **一键关闭**：点「关闭辅助系统」移除当前档位，恢复正常状态
-- 📋 **界面干净**：只显示 3 个档位决议 + 激活时出现的「关闭辅助系统」，无冗余条目
-- 🌐 **全方位增益**：覆盖政治、经济、工业、资源、陆海空三军、人力、外交共 30 项
+- 🎚️ **三档可随时切换**：天命初醒 / 天命加身 / 天命之主，档位决议常驻显示，点哪个直接切换（自动移除旧档位，**绝不叠加**）
+- 🚫 **一键收回**：点「收回天命」移除当前档位，恢复正常状态
+- 📋 **界面干净**：只显示 3 个档位决议 + 激活时出现的「收回天命」，无冗余条目
+- 🌐 **全方位增益**：覆盖政治、经济、工业、资源、陆海空三军、人力、外交、后勤等 41-45 项
 - 🗣️ **双语本地化**：简体中文 + English
 - 🎯 兼容游戏版本 **1.19.\***
 
@@ -18,12 +18,12 @@
 
 1. 下载本仓库 `mod_2008/` 文件夹与 `mod_2008.mod` 文件（或 Releases 中的 zip）
 2. 放入 `Documents\Paradox Interactive\Hearts of Iron IV\mod\`
-3. Paradox 启动器中启用「游戏体验增强」（Tags: Gameplay）
-4. 进入游戏 → 决议面板 → 「玩家辅助」分类 → 选择档位
+3. Paradox 启动器中启用「天命降临」（Tags: Gameplay）
+4. 进入游戏 → 决议面板 → 「天命帷幄」分类 → 选择档位
 
 ## 🎛️ 档位数值
 
-| 维度 | 🟢 轻度 | 🟡 中度 | 🔴 全面 |
+| 维度 | 🟢 天命初醒 | 🟡 天命加身 | 🔴 天命之主 |
 |------|--------|--------|--------|
 | 政治点 | +15% | +30% | +100% |
 | 稳定度 | +10% | +10% | +20% |
@@ -64,4 +64,4 @@
 本 mod 通过 [hagane.works](https://scharnhorst.hagane.works)（钢之工坊）平台构建：
 
 - 平台 REST API 驱动工作台（决议/民族精神），`export/validate` + `lint/tree-validation` 校验通过后导出
-- 构建脚本见 `scripts/update_mod_v2.py`（需要 `HOI4_PLATFORM_URL` / `HOI4_PLATFORM_TOKEN` 环境变量，令牌**绝不入库**）
+- 构建脚本见 `scripts/update_mod_v5.py`（需要 `HOI4_PLATFORM_URL` / `HOI4_PLATFORM_TOKEN` 环境变量，令牌**绝不入库**）
