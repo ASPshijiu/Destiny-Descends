@@ -1,0 +1,11 @@
+﻿l_english:
+ player_assistance: "Player Assistance"
+ player_assistance_desc: "Enable your personal assistance system."
+ player_assist_heavy: "Enable Assistance · Full"
+ player_assist_heavy_desc: "Grant a massive set of national bonuses to the player."
+ player_assist_light: "Enable Assistance · Light"
+ player_assist_light_desc: "Grant a light set of national bonuses to the player."
+ player_assist_medium: "Enable Assistance · Medium"
+ player_assist_medium_desc: "Grant a medium set of national bonuses to the player."
+ player_assist_reset: "Reconfigure Assistance Level"
+ player_assist_reset_desc: "Clear the current assistance level so a different tier can be chosen."

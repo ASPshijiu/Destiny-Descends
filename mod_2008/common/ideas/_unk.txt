@@ -1,0 +1,116 @@
+ideas = {
+
+	country = {
+		player_assist_heavy_idea = {
+			picture = generic_build_infrastructure
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 1
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				consumer_goods_factor = -0.15
+				research_speed_factor = 0.5
+				production_speed_factor = 0.4
+				building_speed_factor = 0.4
+				dockyard_speed_factor = 0.4
+				repair_speed_factor = 0.3
+				industrial_capacity_factory = 8
+				resource_gain_factor = 0.4
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				army_org_factor = 0.25
+				army_morale_factor = 0.25
+				training_time_factor = -0.4
+				experience_gain_army = 0.5
+				experience_gain_navy = 0.5
+				experience_gain_air = 0.5
+				recruitable_population_factor = 0.15
+				navy_attack_factor = 0.2
+				navy_defence_factor = 0.2
+				naval_speed_factor = 0.15
+				naval_max_range_factor = 0.15
+				air_attack_factor = 0.2
+				air_defence_factor = 0.2
+				air_agility_factor = 0.2
+				air_bombing_factor = 0.2
+				justify_war_goal_time = -0.4
+				land_reinforce_rate = 0.2
+				conscription = 0.05
+			}
+		}
+
+		player_assist_light_idea = {
+			picture = generic_build_infrastructure
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.1
+				production_speed_factor = 0.1
+				building_speed_factor = 0.1
+				dockyard_speed_factor = 0.1
+				repair_speed_factor = 0.1
+				industrial_capacity_factory = 2
+				resource_gain_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				training_time_factor = -0.1
+				experience_gain_army = 0.1
+				experience_gain_navy = 0.1
+				experience_gain_air = 0.1
+				recruitable_population_factor = 0.05
+				navy_attack_factor = 0.05
+				navy_defence_factor = 0.05
+				naval_speed_factor = 0.05
+				naval_max_range_factor = 0.05
+				air_attack_factor = 0.05
+				air_defence_factor = 0.05
+				air_agility_factor = 0.05
+				air_bombing_factor = 0.05
+				justify_war_goal_time = -0.1
+			}
+		}
+
+		player_assist_medium_idea = {
+			picture = generic_build_infrastructure
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.3
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.2
+				production_speed_factor = 0.2
+				building_speed_factor = 0.2
+				dockyard_speed_factor = 0.2
+				repair_speed_factor = 0.15
+				industrial_capacity_factory = 4
+				resource_gain_factor = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+				training_time_factor = -0.2
+				experience_gain_army = 0.2
+				experience_gain_navy = 0.2
+				experience_gain_air = 0.2
+				recruitable_population_factor = 0.1
+				navy_attack_factor = 0.1
+				navy_defence_factor = 0.1
+				naval_speed_factor = 0.1
+				naval_max_range_factor = 0.1
+				air_attack_factor = 0.1
+				air_defence_factor = 0.1
+				air_agility_factor = 0.1
+				air_bombing_factor = 0.1
+				justify_war_goal_time = -0.2
+				land_reinforce_rate = 0.1
+			}
+		}
+
+	}
+}

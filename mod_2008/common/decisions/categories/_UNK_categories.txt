@@ -1,0 +1,6 @@
+player_assistance = {
+	priority = 1
+	allowed = {
+		is_ai = no
+	}
+}

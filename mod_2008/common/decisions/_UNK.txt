@@ -1,0 +1,51 @@
+player_assistance = {
+
+	player_assist_heavy = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = player_assist_light_idea } NOT = { has_idea = player_assist_medium_idea } NOT = { has_idea = player_assist_heavy_idea }
+		}
+		complete_effect = {
+			remove_ideas = { player_assist_light_idea player_assist_medium_idea } add_ideas = player_assist_heavy_idea
+		}
+	}
+
+	player_assist_light = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = player_assist_light_idea } NOT = { has_idea = player_assist_medium_idea } NOT = { has_idea = player_assist_heavy_idea }
+		}
+		complete_effect = {
+			remove_ideas = { player_assist_medium_idea player_assist_heavy_idea } add_ideas = player_assist_light_idea
+		}
+	}
+
+	player_assist_medium = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = player_assist_light_idea } NOT = { has_idea = player_assist_medium_idea } NOT = { has_idea = player_assist_heavy_idea }
+		}
+		complete_effect = {
+			remove_ideas = { player_assist_light_idea player_assist_heavy_idea } add_ideas = player_assist_medium_idea
+		}
+	}
+
+	player_assist_reset = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			OR = { has_idea = player_assist_light_idea } OR = { has_idea = player_assist_medium_idea } OR = { has_idea = player_assist_heavy_idea }
+		}
+		complete_effect = {
+			remove_ideas = { player_assist_light_idea player_assist_medium_idea player_assist_heavy_idea }
+		}
+	}
+
+}

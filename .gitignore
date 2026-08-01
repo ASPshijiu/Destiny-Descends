@@ -1,0 +1,14 @@
+# 会话记录与本地杂项
+.reasonix/
+*.zip
+__pycache__/
+*.pyc
+
+# 环境变量与密钥（令牌绝不入库）
+.env
+*.env
+hoi4pat_*
+
+# 系统文件
+Thumbs.db
+.DS_Store
