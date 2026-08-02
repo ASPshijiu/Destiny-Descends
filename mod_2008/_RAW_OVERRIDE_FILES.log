@@ -8,4 +8,6 @@ WROTE: common/military_industrial_organization/organizations/qin_mio.txt
 WROTE: common/unit_leader/qin_leader_skills.txt
 WROTE: common/unit_leader/qin_traits.txt
 WROTE: localisation/english/qin_mio_l_english.yml
+WROTE: localisation/english/qin_traits_l_english.yml
 WROTE: localisation/simp_chinese/qin_mio_l_simp_chinese.yml
+WROTE: localisation/simp_chinese/qin_traits_l_simp_chinese.yml
