@@ -1,6 +1,8 @@
 ﻿l_english:
  player_assistance: "Hall of Destiny"
  player_assistance_desc: "Hold the mandate of heaven and bless the nation."
+ player_assist_design: "Destiny Design Bureau"
+ player_assist_design_desc: "Auto-design the full arsenal from your researched technologies: tanks, SPGs, tank destroyers, AA tanks, aircraft and warships — all per vanilla stats."
  player_assist_heavy: "Lord of Destiny"
  player_assist_heavy_desc: "Lord of Destiny — grant the player supreme all-around blessings."
  player_assist_light: "Destiny Awakening"

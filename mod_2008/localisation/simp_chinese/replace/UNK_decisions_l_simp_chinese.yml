@@ -1,6 +1,8 @@
 ﻿l_simp_chinese:
  player_assistance: "天命帷幄"
  player_assistance_desc: "执掌天命，恩泽万民，护佑社稷。"
+ player_assist_design: "天命设计局"
+ player_assist_design_desc: "根据已研发科技一键自动设计全套装备：坦克、自行火炮、坦克歼击车、防空坦克、各型飞机与舰船——数值均按原版标准。"
  player_assist_heavy: "天命之主"
  player_assist_heavy_desc: "天命之主，君临天下——为玩家提供无上的全面祝福。"
  player_assist_light: "天命初醒"
