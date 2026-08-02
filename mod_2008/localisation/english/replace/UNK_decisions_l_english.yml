@@ -7,5 +7,7 @@
  player_assist_light_desc: "Destiny awakens — grant the player a light set of all-around blessings."
  player_assist_medium: "Destiny Embodied"
  player_assist_medium_desc: "Destiny embodied — grant the player a powerful set of all-around blessings."
+ player_assist_mio: "Unlock Destiny War Industry"
+ player_assist_mio_desc: "Establish the Mandate of Heaven war industry: imperial ordnance, armor, aviation and shipyards, blessed by destiny."
  player_assist_reset: "Withdraw Destiny"
  player_assist_reset_desc: "Withdraw the destiny blessing and return to normal."

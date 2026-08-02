@@ -1,0 +1,184 @@
+#### 天命军工：步兵武器 ####
+Qin_imperial_infantry = {
+	icon = GFX_idea_qin_mio
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = { has_country_flag = qin_mio_unlocked }
+	}
+	ai_will_do = {
+		base = 0
+	}
+	equipment_type = {
+		infantry_equipment
+	}
+	research_categories = { infantry_weapons }
+	initial_trait = {
+		name = qin_mio_infantry
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_efficiency_cap_factor = 0.15
+			production_cost_factor = -0.15
+			production_efficiency_gain_factor = 0.15
+			production_resource_need_factor = -0.25
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.3
+			military_industrial_organization_design_team_assign_cost = -1.0
+			military_industrial_organization_design_team_change_cost = -1.0
+		}
+	}
+}
+
+#### 天命军工：支援装备 ####
+Qin_imperial_support = {
+	icon = GFX_idea_qin_mio
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = { has_country_flag = qin_mio_unlocked }
+	}
+	ai_will_do = {
+		base = 0
+	}
+	equipment_type = {
+		support_equipment
+	}
+	research_categories = { support }
+	initial_trait = {
+		name = qin_mio_support
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_efficiency_cap_factor = 0.15
+			production_cost_factor = -0.15
+			production_efficiency_gain_factor = 0.15
+			production_resource_need_factor = -0.25
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.3
+			military_industrial_organization_design_team_assign_cost = -1.0
+			military_industrial_organization_design_team_change_cost = -1.0
+		}
+	}
+}
+
+#### 天命军工：装甲兵工厂 ####
+Qin_imperial_armor = {
+	icon = GFX_idea_qin_mio
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = { has_country_flag = qin_mio_unlocked }
+	}
+	ai_will_do = {
+		base = 0
+	}
+	equipment_type = {
+		tanks
+	}
+	research_categories = { armor }
+	initial_trait = {
+		name = qin_mio_armor
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_efficiency_cap_factor = 0.15
+			production_cost_factor = -0.15
+			production_efficiency_gain_factor = 0.15
+			production_resource_need_factor = -0.25
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.3
+			military_industrial_organization_design_team_assign_cost = -1.0
+			military_industrial_organization_design_team_change_cost = -1.0
+		}
+	}
+}
+
+#### 天命军工：航空工业 ####
+Qin_imperial_aircraft = {
+	icon = GFX_idea_qin_mio
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = { has_country_flag = qin_mio_unlocked }
+	}
+	ai_will_do = {
+		base = 0
+	}
+	equipment_type = {
+		planes
+	}
+	research_categories = { aircraft }
+	initial_trait = {
+		name = qin_mio_aircraft
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_efficiency_cap_factor = 0.15
+			production_cost_factor = -0.15
+			production_efficiency_gain_factor = 0.15
+			production_resource_need_factor = -0.25
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.3
+			military_industrial_organization_design_team_assign_cost = -1.0
+			military_industrial_organization_design_team_change_cost = -1.0
+		}
+	}
+}
+
+#### 天命军工：海军船坞 ####
+Qin_imperial_navy = {
+	icon = GFX_idea_qin_mio
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = { has_country_flag = qin_mio_unlocked }
+	}
+	ai_will_do = {
+		base = 0
+	}
+	equipment_type = {
+		ships
+	}
+	research_categories = { navy }
+	initial_trait = {
+		name = qin_mio_navy
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_efficiency_cap_factor = 0.15
+			production_cost_factor = -0.15
+			production_efficiency_gain_factor = 0.15
+			production_resource_need_factor = -0.25
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.3
+			military_industrial_organization_design_team_assign_cost = -1.0
+			military_industrial_organization_design_team_change_cost = -1.0
+		}
+	}
+}

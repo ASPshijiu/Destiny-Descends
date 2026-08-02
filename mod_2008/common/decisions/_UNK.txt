@@ -27,6 +27,18 @@ player_assistance = {
 		}
 	}
 
+	player_assist_mio = {
+		allowed = {
+			is_ai = no
+		}
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = qin_mio_unlocked
+			add_political_power = -300
+		}
+	}
+
 	player_assist_reset = {
 		allowed = {
 			is_ai = no

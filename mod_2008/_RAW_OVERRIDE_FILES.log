@@ -1,0 +1,8 @@
+# ARCH #15 raw override files (2026-06-16)
+# Each entry below was written VERBATIM at its path, bypassing
+# all platform gating. The platform did NOT parse or validate
+# the content — correctness is the author's responsibility.
+
+WROTE: common/military_industrial_organization/organizations/qin_mio.txt
+WROTE: localisation/english/qin_mio_l_english.yml
+WROTE: localisation/simp_chinese/qin_mio_l_simp_chinese.yml
