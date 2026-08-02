@@ -280,53 +280,5 @@ ideas = {
 			}
 		}
 
-		qin_res_aluminium = {
-			picture = generic_build_infrastructure
-			removal_cost = 20
-			modifier = {
-				country_resource_aluminium = 100
-			}
-		}
-
-		qin_res_chromium = {
-			picture = generic_build_infrastructure
-			removal_cost = 20
-			modifier = {
-				country_resource_chromium = 100
-			}
-		}
-
-		qin_res_oil = {
-			picture = generic_build_infrastructure
-			removal_cost = 20
-			modifier = {
-				country_resource_oil = 100
-			}
-		}
-
-		qin_res_rubber = {
-			picture = generic_build_infrastructure
-			removal_cost = 20
-			modifier = {
-				country_resource_rubber = 100
-			}
-		}
-
-		qin_res_steel = {
-			picture = generic_build_infrastructure
-			removal_cost = 20
-			modifier = {
-				country_resource_steel = 100
-			}
-		}
-
-		qin_res_tungsten = {
-			picture = generic_build_infrastructure
-			removal_cost = 20
-			modifier = {
-				country_resource_tungsten = 100
-			}
-		}
-
 	}
 }

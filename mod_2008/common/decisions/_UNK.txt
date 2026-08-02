@@ -341,12 +341,13 @@ qin_resource_bureau = {
 		allowed = {
 			is_ai = no
 		}
-		visible = {
-			NOT = { has_idea = qin_res_aluminium }
-		}
 		cost = 20
 		complete_effect = {
-			add_ideas = qin_res_aluminium
+			add_resource = { type = aluminium amount = 100 }
+		}
+		state_target = yes
+		target_trigger = {
+			is_owned_by = ROOT
 		}
 	}
 
@@ -354,12 +355,13 @@ qin_resource_bureau = {
 		allowed = {
 			is_ai = no
 		}
-		visible = {
-			NOT = { has_idea = qin_res_chromium }
-		}
 		cost = 20
 		complete_effect = {
-			add_ideas = qin_res_chromium
+			add_resource = { type = chromium amount = 100 }
+		}
+		state_target = yes
+		target_trigger = {
+			is_owned_by = ROOT
 		}
 	}
 
@@ -367,12 +369,13 @@ qin_resource_bureau = {
 		allowed = {
 			is_ai = no
 		}
-		visible = {
-			NOT = { has_idea = qin_res_oil }
-		}
 		cost = 20
 		complete_effect = {
-			add_ideas = qin_res_oil
+			add_resource = { type = oil amount = 100 }
+		}
+		state_target = yes
+		target_trigger = {
+			is_owned_by = ROOT
 		}
 	}
 
@@ -380,12 +383,13 @@ qin_resource_bureau = {
 		allowed = {
 			is_ai = no
 		}
-		visible = {
-			NOT = { has_idea = qin_res_rubber }
-		}
 		cost = 20
 		complete_effect = {
-			add_ideas = qin_res_rubber
+			add_resource = { type = rubber amount = 100 }
+		}
+		state_target = yes
+		target_trigger = {
+			is_owned_by = ROOT
 		}
 	}
 
@@ -393,12 +397,13 @@ qin_resource_bureau = {
 		allowed = {
 			is_ai = no
 		}
-		visible = {
-			NOT = { has_idea = qin_res_steel }
-		}
 		cost = 20
 		complete_effect = {
-			add_ideas = qin_res_steel
+			add_resource = { type = steel amount = 100 }
+		}
+		state_target = yes
+		target_trigger = {
+			is_owned_by = ROOT
 		}
 	}
 
@@ -406,12 +411,13 @@ qin_resource_bureau = {
 		allowed = {
 			is_ai = no
 		}
-		visible = {
-			NOT = { has_idea = qin_res_tungsten }
-		}
 		cost = 20
 		complete_effect = {
-			add_ideas = qin_res_tungsten
+			add_resource = { type = tungsten amount = 100 }
+		}
+		state_target = yes
+		target_trigger = {
+			is_owned_by = ROOT
 		}
 	}
 
