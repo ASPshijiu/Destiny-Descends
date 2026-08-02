@@ -1,6 +1,5 @@
-#### 天命军工：步兵武器 ####
+#### 天命军工：步兵与支援 ####
 Qin_imperial_infantry = {
-	icon = GFX_idea_qin_mio
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -11,9 +10,8 @@ Qin_imperial_infantry = {
 		base = 0
 	}
 	equipment_type = {
-		infantry_equipment
+		mio_cat_eq_all_infantry_and_support_equipment
 	}
-	research_categories = { infantry_weapons }
 	initial_trait = {
 		name = qin_mio_infantry
 		equipment_bonus = {
@@ -35,46 +33,8 @@ Qin_imperial_infantry = {
 	}
 }
 
-#### 天命军工：支援装备 ####
-Qin_imperial_support = {
-	icon = GFX_idea_qin_mio
-	allowed = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	available = {
-		FROM = { has_country_flag = qin_mio_unlocked }
-	}
-	ai_will_do = {
-		base = 0
-	}
-	equipment_type = {
-		support_equipment
-	}
-	research_categories = { support }
-	initial_trait = {
-		name = qin_mio_support
-		equipment_bonus = {
-			build_cost_ic = -0.15
-		}
-		production_bonus = {
-			production_capacity_factor = 0.15
-			production_efficiency_cap_factor = 0.15
-			production_cost_factor = -0.15
-			production_efficiency_gain_factor = 0.15
-			production_resource_need_factor = -0.25
-			production_conversion_speed_factor = 0.5
-		}
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.3
-			military_industrial_organization_design_team_assign_cost = -1.0
-			military_industrial_organization_design_team_change_cost = -1.0
-		}
-	}
-}
-
 #### 天命军工：装甲兵工厂 ####
 Qin_imperial_armor = {
-	icon = GFX_idea_qin_mio
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -85,9 +45,9 @@ Qin_imperial_armor = {
 		base = 0
 	}
 	equipment_type = {
-		tanks
+		mio_cat_eq_all_tanks
 	}
-	research_categories = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
 	initial_trait = {
 		name = qin_mio_armor
 		equipment_bonus = {
@@ -109,9 +69,8 @@ Qin_imperial_armor = {
 	}
 }
 
-#### 天命军工：航空工业 ####
-Qin_imperial_aircraft = {
-	icon = GFX_idea_qin_mio
+#### 天命军工：炮兵工厂 ####
+Qin_imperial_artillery = {
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -122,9 +81,43 @@ Qin_imperial_aircraft = {
 		base = 0
 	}
 	equipment_type = {
-		planes
+		mio_cat_eq_all_artillery
 	}
-	research_categories = { aircraft }
+	initial_trait = {
+		name = qin_mio_artillery
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+			production_efficiency_cap_factor = 0.15
+			production_cost_factor = -0.15
+			production_efficiency_gain_factor = 0.15
+			production_resource_need_factor = -0.25
+			production_conversion_speed_factor = 0.5
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.3
+			military_industrial_organization_design_team_assign_cost = -1.0
+			military_industrial_organization_design_team_change_cost = -1.0
+		}
+	}
+}
+
+#### 天命军工：航空工业 ####
+Qin_imperial_aircraft = {
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = { has_country_flag = qin_mio_unlocked }
+	}
+	ai_will_do = {
+		base = 0
+	}
+	equipment_type = {
+		mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane mio_cat_eq_all_large_plane mio_cat_eq_all_cv_aircraft
+	}
 	initial_trait = {
 		name = qin_mio_aircraft
 		equipment_bonus = {
@@ -148,7 +141,6 @@ Qin_imperial_aircraft = {
 
 #### 天命军工：海军船坞 ####
 Qin_imperial_navy = {
-	icon = GFX_idea_qin_mio
 	allowed = {
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -159,9 +151,9 @@ Qin_imperial_navy = {
 		base = 0
 	}
 	equipment_type = {
-		ships
+		mio_cat_eq_all_destroyer mio_cat_eq_all_cruiser mio_cat_eq_all_battleship mio_cat_eq_all_carrier
 	}
-	research_categories = { navy }
+	research_categories = { mio_cat_tech_all_screen_ship_and_modules }
 	initial_trait = {
 		name = qin_mio_navy
 		equipment_bonus = {
