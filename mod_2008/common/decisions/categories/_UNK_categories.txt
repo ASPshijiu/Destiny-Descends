@@ -4,3 +4,10 @@ player_assistance = {
 		is_ai = no
 	}
 }
+
+qin_resource_bureau = {
+	priority = 4
+	allowed = {
+		is_ai = no
+	}
+}

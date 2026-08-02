@@ -334,3 +334,85 @@ player_assistance = {
 	}
 
 }
+
+qin_resource_bureau = {
+
+	qin_buy_aluminium = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = qin_res_aluminium }
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = qin_res_aluminium
+		}
+	}
+
+	qin_buy_chromium = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = qin_res_chromium }
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = qin_res_chromium
+		}
+	}
+
+	qin_buy_oil = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = qin_res_oil }
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = qin_res_oil
+		}
+	}
+
+	qin_buy_rubber = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = qin_res_rubber }
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = qin_res_rubber
+		}
+	}
+
+	qin_buy_steel = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = qin_res_steel }
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = qin_res_steel
+		}
+	}
+
+	qin_buy_tungsten = {
+		allowed = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_idea = qin_res_tungsten }
+		}
+		cost = 100
+		complete_effect = {
+			add_ideas = qin_res_tungsten
+		}
+	}
+
+}
