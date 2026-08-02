@@ -97,6 +97,9 @@ ideas = {
 				high_command_cost_factor = -0.2
 				equipment_conversion_speed = 0.6
 				air_accidents_factor = -1
+				command_power_gain = 4
+				command_abilities_cost_factor = -0.4
+				max_command_power = 400
 			}
 		}
 
@@ -192,6 +195,9 @@ ideas = {
 				high_command_cost_factor = -0.02
 				equipment_conversion_speed = 0.05
 				air_accidents_factor = -0.1
+				command_power_gain = 0.5
+				command_abilities_cost_factor = -0.1
+				max_command_power = 50
 			}
 		}
 
@@ -289,6 +295,9 @@ ideas = {
 				high_command_cost_factor = -0.06
 				equipment_conversion_speed = 0.15
 				air_accidents_factor = -0.3
+				command_power_gain = 1.5
+				command_abilities_cost_factor = -0.2
+				max_command_power = 150
 			}
 		}
 
