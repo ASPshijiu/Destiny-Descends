@@ -88,6 +88,11 @@ ideas = {
 				intel_network_gain_factor = 1.5
 				encryption_factor = 1.5
 				decryption_factor = 1.5
+				experience_gain_factor = 5
+				experience_gain_army_unit_factor = 5
+				experience_gain_navy_unit_factor = 5
+				air_training_xp_gain_factor = 5
+				air_mission_xp_gain_factor = 5
 			}
 		}
 
@@ -174,6 +179,11 @@ ideas = {
 				intel_network_gain_factor = 0.1
 				encryption_factor = 0.1
 				decryption_factor = 0.1
+				experience_gain_factor = 0.5
+				experience_gain_army_unit_factor = 0.5
+				experience_gain_navy_unit_factor = 0.5
+				air_training_xp_gain_factor = 0.5
+				air_mission_xp_gain_factor = 0.5
 			}
 		}
 
@@ -262,6 +272,11 @@ ideas = {
 				intel_network_gain_factor = 0.3
 				encryption_factor = 0.3
 				decryption_factor = 0.3
+				experience_gain_factor = 2
+				experience_gain_army_unit_factor = 2
+				experience_gain_navy_unit_factor = 2
+				air_training_xp_gain_factor = 2
+				air_mission_xp_gain_factor = 2
 			}
 		}
 
