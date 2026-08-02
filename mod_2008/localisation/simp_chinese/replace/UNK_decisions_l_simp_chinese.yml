@@ -19,6 +19,8 @@
  qin_buy_aluminium_desc: "花费 20 政治点，随机一个本国核心州永久获得 +100 铝。"
  qin_buy_chromium: "采购铬矿"
  qin_buy_chromium_desc: "花费 20 政治点，随机一个本国核心州永久获得 +100 铬。"
+ qin_buy_coal: "采购煤炭"
+ qin_buy_coal_desc: "花费 20 政治点，随机一个本国核心州永久获得 +100 煤炭。"
  qin_buy_oil: "采购石油"
  qin_buy_oil_desc: "花费 20 政治点，随机一个本国核心州永久获得 +100 石油。"
  qin_buy_rubber: "采购橡胶"

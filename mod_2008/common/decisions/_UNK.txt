@@ -356,6 +356,16 @@ qin_resource_bureau = {
 		}
 	}
 
+	qin_buy_coal = {
+		available = {
+			is_ai = no
+		}
+		cost = 20
+		complete_effect = {
+			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = coal amount = 100 } }
+		}
+	}
+
 	qin_buy_oil = {
 		available = {
 			is_ai = no
