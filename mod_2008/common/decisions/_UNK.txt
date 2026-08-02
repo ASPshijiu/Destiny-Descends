@@ -1,7 +1,7 @@
 player_assistance = {
 
 	player_assist_design = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 200
@@ -283,7 +283,7 @@ player_assistance = {
 	}
 
 	player_assist_heavy = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		complete_effect = {
@@ -292,7 +292,7 @@ player_assistance = {
 	}
 
 	player_assist_light = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		complete_effect = {
@@ -301,7 +301,7 @@ player_assistance = {
 	}
 
 	player_assist_medium = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		complete_effect = {
@@ -310,7 +310,7 @@ player_assistance = {
 	}
 
 	player_assist_mio = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 300
@@ -321,7 +321,7 @@ player_assistance = {
 	}
 
 	player_assist_reset = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		visible = {
@@ -337,7 +337,7 @@ player_assistance = {
 qin_resource_bureau = {
 
 	qin_buy_aluminium = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 20
@@ -345,13 +345,10 @@ qin_resource_bureau = {
 			add_resource = { type = aluminium amount = 100 }
 		}
 		state_target = yes
-		target_trigger = {
-			is_owned_by = ROOT
-		}
 	}
 
 	qin_buy_chromium = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 20
@@ -359,13 +356,10 @@ qin_resource_bureau = {
 			add_resource = { type = chromium amount = 100 }
 		}
 		state_target = yes
-		target_trigger = {
-			is_owned_by = ROOT
-		}
 	}
 
 	qin_buy_oil = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 20
@@ -373,13 +367,10 @@ qin_resource_bureau = {
 			add_resource = { type = oil amount = 100 }
 		}
 		state_target = yes
-		target_trigger = {
-			is_owned_by = ROOT
-		}
 	}
 
 	qin_buy_rubber = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 20
@@ -387,13 +378,10 @@ qin_resource_bureau = {
 			add_resource = { type = rubber amount = 100 }
 		}
 		state_target = yes
-		target_trigger = {
-			is_owned_by = ROOT
-		}
 	}
 
 	qin_buy_steel = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 20
@@ -401,13 +389,10 @@ qin_resource_bureau = {
 			add_resource = { type = steel amount = 100 }
 		}
 		state_target = yes
-		target_trigger = {
-			is_owned_by = ROOT
-		}
 	}
 
 	qin_buy_tungsten = {
-		allowed = {
+		available = {
 			is_ai = no
 		}
 		cost = 20
@@ -415,9 +400,6 @@ qin_resource_bureau = {
 			add_resource = { type = tungsten amount = 100 }
 		}
 		state_target = yes
-		target_trigger = {
-			is_owned_by = ROOT
-		}
 	}
 
 }

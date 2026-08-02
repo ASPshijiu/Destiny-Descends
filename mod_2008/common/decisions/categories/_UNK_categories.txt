@@ -1,13 +1,13 @@
 player_assistance = {
 	priority = 1
-	allowed = {
+	visible = {
 		is_ai = no
 	}
 }
 
 qin_resource_bureau = {
 	priority = 4
-	allowed = {
+	visible = {
 		is_ai = no
 	}
 }
