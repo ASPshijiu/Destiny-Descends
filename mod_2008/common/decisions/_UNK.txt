@@ -344,7 +344,7 @@ qin_resource_bureau = {
 		visible = {
 			NOT = { has_idea = qin_res_aluminium }
 		}
-		cost = 100
+		cost = 20
 		complete_effect = {
 			add_ideas = qin_res_aluminium
 		}
@@ -357,7 +357,7 @@ qin_resource_bureau = {
 		visible = {
 			NOT = { has_idea = qin_res_chromium }
 		}
-		cost = 100
+		cost = 20
 		complete_effect = {
 			add_ideas = qin_res_chromium
 		}
@@ -370,7 +370,7 @@ qin_resource_bureau = {
 		visible = {
 			NOT = { has_idea = qin_res_oil }
 		}
-		cost = 100
+		cost = 20
 		complete_effect = {
 			add_ideas = qin_res_oil
 		}
@@ -383,7 +383,7 @@ qin_resource_bureau = {
 		visible = {
 			NOT = { has_idea = qin_res_rubber }
 		}
-		cost = 100
+		cost = 20
 		complete_effect = {
 			add_ideas = qin_res_rubber
 		}
@@ -396,7 +396,7 @@ qin_resource_bureau = {
 		visible = {
 			NOT = { has_idea = qin_res_steel }
 		}
-		cost = 100
+		cost = 20
 		complete_effect = {
 			add_ideas = qin_res_steel
 		}
@@ -409,7 +409,7 @@ qin_resource_bureau = {
 		visible = {
 			NOT = { has_idea = qin_res_tungsten }
 		}
-		cost = 100
+		cost = 20
 		complete_effect = {
 			add_ideas = qin_res_tungsten
 		}
