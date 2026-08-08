@@ -49,7 +49,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = aluminium amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = aluminium amount = 100 } }
 		}
 	}
 
@@ -59,7 +59,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = chromium amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = chromium amount = 100 } }
 		}
 	}
 
@@ -69,7 +69,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = coal amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = coal amount = 100 } }
 		}
 	}
 
@@ -79,7 +79,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = oil amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = oil amount = 100 } }
 		}
 	}
 
@@ -89,7 +89,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = rubber amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = rubber amount = 100 } }
 		}
 	}
 
@@ -99,7 +99,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = steel amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = steel amount = 100 } }
 		}
 	}
 
@@ -109,7 +109,7 @@ qin_resource_bureau = {
 		}
 		cost = 20
 		complete_effect = {
-			random_state = { limit = { is_owned_by = ROOT is_core = ROOT } add_resource = { type = tungsten amount = 100 } }
+			random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } add_resource = { type = tungsten amount = 100 } }
 		}
 	}
 

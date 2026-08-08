@@ -32,7 +32,7 @@ if isinstance(b, list):
             cat_id = c.get("id")
 print("分类 id:", cat_id)
 
-eff = ("random_state = { limit = { is_owned_by = ROOT is_core = ROOT } "
+eff = ("random_state = { limit = { is_owned_by = ROOT is_core_of = ROOT } "
        "add_resource = { type = coal amount = 100 } }")
 s, b = call("POST", f"/api/projects/{PID}/decisions", {
     "category_id": cat_id,

@@ -31,7 +31,7 @@ _, b = call("GET", f"/api/projects/{PID}/decisions")
 dec_ids = {d["decision_id"]: d["id"] for d in b} if isinstance(b, list) else {}
 for res, (nz, ne, rtype) in RES.items():
     did = f"qin_buy_{res}"
-    eff = (f"random_state = {{ limit = {{ is_owned_by = ROOT is_core = ROOT }} "
+    eff = (f"random_state = {{ limit = {{ is_owned_by = ROOT is_core_of = ROOT }} "
            f"add_resource = {{ type = {rtype} amount = 100 }} }}")
     body = {
         "state_target": "",

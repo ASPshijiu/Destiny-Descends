@@ -1,5 +1,5 @@
 {
-  "artifact_id": "50a3b8ce94420c8a4f84d783dc2c7f0654376a1cdf32a8b7c194084234f8de02",
+  "artifact_id": "d644765a6b89cf478482b0dc47d3aff831c9d32f0f7cf93b982f7ddc5091821d",
   "build_id": null,
   "entries": [
     {
@@ -143,12 +143,12 @@
       "write_order": 10
     },
     {
-      "content_sha256": "fbba72d4a5b1f8ca684a11fba44130abb576a448fbbd74f32dd53fa638ec9a93",
+      "content_sha256": "35c96a486a1b899163714c3711f55705460e6f956d6ef2bba34f8b045c63bb36",
       "origin": "structured_generated",
       "path": "mod_2008/common/decisions/_UNK.txt",
       "replaced_same_path": false,
       "replacement_count": 0,
-      "size": 2467,
+      "size": 2488,
       "source_entity": {
         "id": "emit_decisions_superevents",
         "type": "emitter"
