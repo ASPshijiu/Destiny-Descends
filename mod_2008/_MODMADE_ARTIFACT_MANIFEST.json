@@ -1,5 +1,5 @@
 {
-  "artifact_id": "8405d128dc26689ab3995fe3f0d6f4da7f3157a5bf398fa5f266f8d97b9b010a",
+  "artifact_id": "b6a2845f030b321820bea3732135fb884e98a691180baa36175fae1e077a3658",
   "build_id": null,
   "entries": [
     {
@@ -31,12 +31,12 @@
       "write_order": 2
     },
     {
-      "content_sha256": "2faf7ecd2f87ded3a7b5cab3d14c511b6c6db8622c34e27887acb44ab7ade018",
+      "content_sha256": "48b26ceda65b2477e2a30a7930b7df6b0e193830ea0769066e5c246c77cc2fad",
       "origin": "structured_generated",
       "path": "mod_2008/common/ideas/_unk.txt",
       "replaced_same_path": false,
       "replacement_count": 0,
-      "size": 9990,
+      "size": 9858,
       "source_entity": {
         "id": "emit_ideas_events",
         "type": "emitter"
